@@ -10,7 +10,6 @@ use TCG\Voyager\Models\Post;
 
 class PostsTableSeeder extends Seeder
 {
-	
     /**
      * Auto generated seed file.
      */
@@ -418,9 +417,9 @@ class PostsTableSeeder extends Seeder
     protected function dataRow($type, $field)
     {
         return DataRow::firstOrNew([
-                'data_type_id' => $type->id,
-                'field'        => $field,
-            ]);
+            'data_type_id' => $type->id,
+            'field'        => $field,
+        ]);
     }
 
     /**

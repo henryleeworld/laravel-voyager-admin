@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use TCG\Voyager\Models\Page;
 
-class CreatePagesTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -38,4 +38,4 @@ class CreatePagesTable extends Migration
     {
         Schema::drop('pages');
     }
-}
+};

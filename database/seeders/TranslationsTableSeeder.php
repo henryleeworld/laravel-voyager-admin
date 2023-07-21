@@ -35,13 +35,13 @@ class TranslationsTableSeeder extends Seeder
         //
         $cat = Category::where('slug', 'category-1')->firstOrFail();
         if ($cat->exists) {
-            $this->trans('zh_TW', $this->arr(['categories', 'slug'], $cat->id), 'DIY 電腦');
-            $this->trans('zh_TW', $this->arr(['categories', 'name'], $cat->id), 'DIY 電腦新上架商品');
+            $this->trans('pt', $this->arr(['categories', 'slug'], $cat->id), 'categoria-1');
+            $this->trans('pt', $this->arr(['categories', 'name'], $cat->id), 'Categoria 1');
         }
         $cat = Category::where('slug', 'category-2')->firstOrFail();
         if ($cat->exists) {
-            $this->trans('zh_TW', $this->arr(['categories', 'slug'], $cat->id), '網路硬碟');
-            $this->trans('zh_TW', $this->arr(['categories', 'name'], $cat->id), 'Synology 原廠配件');
+            $this->trans('pt', $this->arr(['categories', 'slug'], $cat->id), 'categoria-2');
+            $this->trans('pt', $this->arr(['categories', 'name'], $cat->id), 'Categoria 2');
         }
     }
 
@@ -58,27 +58,27 @@ class TranslationsTableSeeder extends Seeder
         $_tpl = ['data_types', $_fld];
         $dtp = DataType::where($_fld, __('voyager::seeders.data_types.post.singular'))->firstOrFail();
         if ($dtp->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $dtp->id), '文章');
+            $this->trans('pt', $this->arr($_tpl, $dtp->id), 'Post');
         }
         $dtp = DataType::where($_fld, __('voyager::seeders.data_types.page.singular'))->firstOrFail();
         if ($dtp->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $dtp->id), '頁面');
+            $this->trans('pt', $this->arr($_tpl, $dtp->id), 'Página');
         }
         $dtp = DataType::where($_fld, __('voyager::seeders.data_types.user.singular'))->firstOrFail();
         if ($dtp->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $dtp->id), '使用者');
+            $this->trans('pt', $this->arr($_tpl, $dtp->id), 'Utilizador');
         }
         $dtp = DataType::where($_fld, __('voyager::seeders.data_types.category.singular'))->firstOrFail();
         if ($dtp->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $dtp->id), '分類');
+            $this->trans('pt', $this->arr($_tpl, $dtp->id), 'Categoria');
         }
         $dtp = DataType::where($_fld, __('voyager::seeders.data_types.menu.singular'))->firstOrFail();
         if ($dtp->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $dtp->id), '選單');
+            $this->trans('pt', $this->arr($_tpl, $dtp->id), 'Menu');
         }
         $dtp = DataType::where($_fld, __('voyager::seeders.data_types.role.singular'))->firstOrFail();
         if ($dtp->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $dtp->id), '角色');
+            $this->trans('pt', $this->arr($_tpl, $dtp->id), 'Função');
         }
 
         // Adding translations for 'display_name_plural'
@@ -87,27 +87,27 @@ class TranslationsTableSeeder extends Seeder
         $_tpl = ['data_types', $_fld];
         $dtp = DataType::where($_fld, __('voyager::seeders.data_types.post.plural'))->firstOrFail();
         if ($dtp->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $dtp->id), '文章');
+            $this->trans('pt', $this->arr($_tpl, $dtp->id), 'Posts');
         }
         $dtp = DataType::where($_fld, __('voyager::seeders.data_types.page.plural'))->firstOrFail();
         if ($dtp->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $dtp->id), '頁面');
+            $this->trans('pt', $this->arr($_tpl, $dtp->id), 'Páginas');
         }
         $dtp = DataType::where($_fld, __('voyager::seeders.data_types.user.plural'))->firstOrFail();
         if ($dtp->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $dtp->id), '使用者');
+            $this->trans('pt', $this->arr($_tpl, $dtp->id), 'Utilizadores');
         }
         $dtp = DataType::where($_fld, __('voyager::seeders.data_types.category.plural'))->firstOrFail();
         if ($dtp->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $dtp->id), '分類');
+            $this->trans('pt', $this->arr($_tpl, $dtp->id), 'Categorias');
         }
         $dtp = DataType::where($_fld, __('voyager::seeders.data_types.menu.plural'))->firstOrFail();
         if ($dtp->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $dtp->id), '選單');
+            $this->trans('pt', $this->arr($_tpl, $dtp->id), 'Menus');
         }
         $dtp = DataType::where($_fld, __('voyager::seeders.data_types.role.plural'))->firstOrFail();
         if ($dtp->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $dtp->id), '角色');
+            $this->trans('pt', $this->arr($_tpl, $dtp->id), 'Funções');
         }
     }
 
@@ -121,7 +121,7 @@ class TranslationsTableSeeder extends Seeder
         $page = Page::where('slug', 'hello-world')->firstOrFail();
         if ($page->exists) {
             $_arr = $this->arr(['pages', 'title'], $page->id);
-            $this->trans('zh_TW', $_arr, '亨利的世界');
+            $this->trans('pt', $_arr, 'Olá Mundo');
             /**
              * For configuring additional languages use it e.g.
              *
@@ -131,11 +131,11 @@ class TranslationsTableSeeder extends Seeder
              * ```
              */
             $_arr = $this->arr(['pages', 'slug'], $page->id);
-            $this->trans('zh_TW', $_arr, '如果你一開口講話後，別人就沈默或只聽你講、只跟著你講，那這很可能不是件好事');
+            $this->trans('pt', $_arr, 'ola-mundo');
 
             $_arr = $this->arr(['pages', 'body'], $page->id);
-            $this->trans('zh_TW', $_arr, '<p>只要存在著地位不平等或角色不同，導致地位高的角色或資深/常做決策的人員一開口，大家就會把自己的意見吞回去，</p>'
-                ."\r\n".'<p>那麼所謂的自主管理很容易變成假象，沒有自主管理，就不容易持續改善，因為一切都是推力，而不是團隊自我產生的拉力跟內聚力。</p>');
+            $this->trans('pt', $_arr, '<p>Olá Mundo. Scallywag grog swab Cat o\'nine tails scuttle rigging hardtack cable nipper Yellow Jack. Handsomely spirits knave lad killick landlubber or just lubber deadlights chantey pinnace crack Jennys tea cup. Provost long clothes black spot Yellow Jack bilged on her anchor league lateen sail case shot lee tackle.</p>'
+                ."\r\n".'<p>Ballast spirits fluke topmast me quarterdeck schooner landlubber or just lubber gabion belaying pin. Pinnace stern galleon starboard warp carouser to go on account dance the hempen jig jolly boat measured fer yer chains. Man-of-war fire in the hole nipperkin handsomely doubloon barkadeer Brethren of the Coast gibbet driver squiffy.</p>');
         }
     }
 
@@ -149,57 +149,57 @@ class TranslationsTableSeeder extends Seeder
         $_tpl = ['menu_items', 'title'];
         $_item = $this->findMenuItem(__('voyager::seeders.menu_items.dashboard'));
         if ($_item->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $_item->id), '儀表板');
+            $this->trans('pt', $this->arr($_tpl, $_item->id), 'Painel de Controle');
         }
 
         $_item = $this->findMenuItem(__('voyager::seeders.menu_items.media'));
         if ($_item->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $_item->id), '媒體');
+            $this->trans('pt', $this->arr($_tpl, $_item->id), 'Media');
         }
 
         $_item = $this->findMenuItem(__('voyager::seeders.menu_items.posts'));
         if ($_item->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $_item->id), '文章');
+            $this->trans('pt', $this->arr($_tpl, $_item->id), 'Publicações');
         }
 
         $_item = $this->findMenuItem(__('voyager::seeders.menu_items.users'));
         if ($_item->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $_item->id), '使用者');
+            $this->trans('pt', $this->arr($_tpl, $_item->id), 'Utilizadores');
         }
 
         $_item = $this->findMenuItem(__('voyager::seeders.menu_items.categories'));
         if ($_item->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $_item->id), '分類');
+            $this->trans('pt', $this->arr($_tpl, $_item->id), 'Categorias');
         }
 
         $_item = $this->findMenuItem(__('voyager::seeders.menu_items.pages'));
         if ($_item->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $_item->id), '頁面');
+            $this->trans('pt', $this->arr($_tpl, $_item->id), 'Páginas');
         }
 
         $_item = $this->findMenuItem(__('voyager::seeders.menu_items.roles'));
         if ($_item->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $_item->id), '角色');
+            $this->trans('pt', $this->arr($_tpl, $_item->id), 'Funções');
         }
 
         $_item = $this->findMenuItem(__('voyager::seeders.menu_items.tools'));
         if ($_item->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $_item->id), '工具');
+            $this->trans('pt', $this->arr($_tpl, $_item->id), 'Ferramentas');
         }
 
         $_item = $this->findMenuItem(__('voyager::seeders.menu_items.menu_builder'));
         if ($_item->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $_item->id), '選單製作');
+            $this->trans('pt', $this->arr($_tpl, $_item->id), 'Menus');
         }
 
         $_item = $this->findMenuItem(__('voyager::seeders.menu_items.database'));
         if ($_item->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $_item->id), '資料庫');
+            $this->trans('pt', $this->arr($_tpl, $_item->id), 'Base de dados');
         }
 
         $_item = $this->findMenuItem(__('voyager::seeders.menu_items.settings'));
         if ($_item->exists) {
-            $this->trans('zh_TW', $this->arr($_tpl, $_item->id), '設置');
+            $this->trans('pt', $this->arr($_tpl, $_item->id), 'Configurações');
         }
     }
 

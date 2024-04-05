@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use TCG\Voyager\Models\Role;
 use TCG\Voyager\Models\User;
@@ -22,7 +23,7 @@ class UsersTableSeeder extends Seeder
             User::create([
                 'name'           => 'Admin',
                 'email'          => 'admin@admin.com',
-                'password'       => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+                'password'       => Hash::make('password'),
                 'remember_token' => Str::random(60),
                 'role_id'        => $role->id,
             ]);

@@ -8,11 +8,9 @@ use TCG\Voyager\Models\Menu;
 class MenusTableSeeder extends Seeder
 {
     /**
-     * Auto generated seed file.
-     *
-     * @return void
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
         Menu::firstOrCreate([
             'name' => 'admin',

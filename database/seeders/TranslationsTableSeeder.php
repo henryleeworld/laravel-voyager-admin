@@ -12,11 +12,9 @@ use TCG\Voyager\Models\Translation;
 class TranslationsTableSeeder extends Seeder
 {
     /**
-     * Auto generated seed file.
-     *
-     * @return void
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
         $this->dataTypesTranslations();
         $this->categoriesTranslations();

@@ -13,9 +13,9 @@ use TCG\Voyager\Models\Post;
 class PostsTableSeeder extends Seeder
 {
     /**
-     * Auto generated seed file.
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
         //Data Type
         $dataType = $this->dataType('slug', 'posts');

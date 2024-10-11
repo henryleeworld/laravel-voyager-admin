@@ -8,9 +8,9 @@ use TCG\Voyager\Models\Role;
 class RolesTableSeeder extends Seeder
 {
     /**
-     * Auto generated seed file.
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
         $role = Role::firstOrNew(['name' => 'admin']);
         if (!$role->exists) {

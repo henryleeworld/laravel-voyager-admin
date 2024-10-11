@@ -9,11 +9,9 @@ use TCG\Voyager\Models\MenuItem;
 class MenuItemsTableSeeder extends Seeder
 {
     /**
-     * Auto generated seed file.
-     *
-     * @return void
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
         $menu = Menu::where('name', 'admin')->firstOrFail();
 

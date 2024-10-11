@@ -8,9 +8,9 @@ use TCG\Voyager\Models\Permission;
 class PermissionsTableSeeder extends Seeder
 {
     /**
-     * Auto generated seed file.
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
         $keys = [
             'browse_admin',

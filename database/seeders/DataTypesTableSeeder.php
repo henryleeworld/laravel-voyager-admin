@@ -8,9 +8,9 @@ use TCG\Voyager\Models\DataType;
 class DataTypesTableSeeder extends Seeder
 {
     /**
-     * Auto generated seed file.
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
         $dataType = $this->dataType('slug', 'users');
         if (!$dataType->exists) {

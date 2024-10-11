@@ -13,11 +13,9 @@ use TCG\Voyager\Models\Permission;
 class CategoriesTableSeeder extends Seeder
 {
     /**
-     * Auto generated seed file.
-     *
-     * @return void
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
         //Data Type
         $dataType = $this->dataType('name', 'categories');

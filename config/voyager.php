@@ -99,19 +99,18 @@ return [
         /*
          * Set whether or not the multilingual is supported by the BREAD input.
          */
-        'enabled' => true,
+        'enabled' => false,
 
         /*
          * Select default language
          */
-        'default' => 'zh_TW',
+        'default' => 'en',
 
         /*
          * Select languages that are supported.
          */
         'locales' => [
             'en',
-            'zh_TW',
             //'pt',
         ],
     ],
@@ -145,9 +144,7 @@ return [
         ],
 
         'widgets' => [
-            'TCG\\Voyager\\Widgets\\UserDimmer',
-            'TCG\\Voyager\\Widgets\\PostDimmer',
-            'TCG\\Voyager\\Widgets\\PageDimmer',
+
         ],
 
     ],

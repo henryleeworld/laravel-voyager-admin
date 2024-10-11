@@ -9,9 +9,9 @@ use TCG\Voyager\Models\DataType;
 class DataRowsTableSeeder extends Seeder
 {
     /**
-     * Auto generated seed file.
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
         $userDataType = DataType::where('slug', 'users')->firstOrFail();
         $menuDataType = DataType::where('slug', 'menus')->firstOrFail();

@@ -8,9 +8,9 @@ use TCG\Voyager\Models\Setting;
 class SettingsTableSeeder extends Seeder
 {
     /**
-     * Auto generated seed file.
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
         $setting = $this->findSetting('site.title');
         if (!$setting->exists) {

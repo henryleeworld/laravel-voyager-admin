@@ -8,14 +8,9 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
-        $platform = \DB::getDoctrineSchemaManager()->getDatabasePlatform();
-        $platform->registerDoctrineTypeMapping('enum', 'string');
-
         Schema::table('posts', function (Blueprint $table) {
             $table->text('excerpt')->nullable()->change();
             $table->text('meta_description')->nullable()->change();
@@ -25,15 +20,13 @@ return new class extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->text('excerpt')->change();
-            $table->text('meta_description')->change();
-            $table->text('meta_keywords')->change();
+            $table->text('excerpt')->nullable(false)->change();
+            $table->text('meta_description')->nullable(false)->change();
+            $table->text('meta_keywords')->nullable(false)->change();
         });
     }
 };

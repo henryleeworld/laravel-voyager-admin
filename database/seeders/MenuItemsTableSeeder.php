@@ -114,11 +114,11 @@ class MenuItemsTableSeeder extends Seeder
             'menu_id' => $menu->id,
             'title'   => __('voyager::seeders.menu_items.database'),
             'url'     => '',
-            'route'   => 'voyager.database.index',
+            'route'   => 'voyager.adminer',
         ]);
         if (!$menuItem->exists) {
             $menuItem->fill([
-                'target'     => '_self',
+                'target'     => '_blank',
                 'icon_class' => 'voyager-data',
                 'color'      => null,
                 'parent_id'  => $toolsMenuItem->id,

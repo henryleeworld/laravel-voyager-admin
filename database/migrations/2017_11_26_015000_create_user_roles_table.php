@@ -12,16 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('user_roles', function (Blueprint $table) {
-            $type = DB::connection()->getSchemaBuilder()->getColumnType('users', 'id');
-            if ($type == 'bigint') {
-                $table->bigInteger('user_id')->unsigned()->index();
-            } else {
-                $table->integer('user_id')->unsigned()->index();
-            }
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->bigInteger('role_id')->unsigned()->index();
-            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+            $table->foreignId('user_id')->index()->constrained()->onDelete('cascade');
+            $table->foreignId('role_id')->index()->constrained()->onDelete('cascade');
             $table->primary(['user_id', 'role_id']);
         });
     }

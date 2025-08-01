@@ -13,7 +13,7 @@ return new class extends Migration
             if (!Schema::hasColumn('users', 'avatar')) {
                 $table->string('avatar')->nullable()->after('email')->default('users/default.png');
             }
-            $table->bigInteger('role_id')->nullable()->after('id');
+            $table->unsignedBigInteger('role_id')->nullable()->after('id');
         });
     }
 

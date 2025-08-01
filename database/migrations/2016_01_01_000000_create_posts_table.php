@@ -12,7 +12,7 @@ return new class extends Migration
     {
         // Create table for storing roles
         Schema::create('posts', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->integer('author_id');
             $table->integer('category_id')->nullable();
             $table->string('title');

@@ -12,7 +12,7 @@ return new class extends Migration
     {
         // Create table for storing roles
         Schema::create('data_types', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('name')->unique();
             $table->string('slug')->unique();
             $table->string('display_name_singular');
@@ -26,8 +26,8 @@ return new class extends Migration
 
         // Create table for storing roles
         Schema::create('data_rows', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('data_type_id')->unsigned();
+            $table->id();
+            $table->foreignId('data_type_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('field');
             $table->string('type');
             $table->string('display_name');
@@ -38,9 +38,6 @@ return new class extends Migration
             $table->boolean('add')->default(true);
             $table->boolean('delete')->default(true);
             $table->text('details')->nullable();
-
-            $table->foreign('data_type_id')->references('id')->on('data_types')
-                ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

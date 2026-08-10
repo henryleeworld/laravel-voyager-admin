@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 use TCG\Voyager\Models\Page;
 
 return new class extends Migration
@@ -11,8 +12,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Create table for storing roles
-        Schema::create('pages', function (Blueprint $table) {
+        Schema::create('pages', function (Blueprint $table): void {
             $table->id();
             $table->integer('author_id');
             $table->string('title');

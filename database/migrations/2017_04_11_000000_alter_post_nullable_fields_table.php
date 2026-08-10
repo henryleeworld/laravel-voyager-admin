@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table): void {
             $table->text('excerpt')->nullable()->change();
             $table->text('meta_description')->nullable()->change();
             $table->text('meta_keywords')->nullable()->change();
@@ -23,7 +23,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table): void {
             $table->text('excerpt')->nullable(false)->change();
             $table->text('meta_description')->nullable(false)->change();
             $table->text('meta_keywords')->nullable(false)->change();

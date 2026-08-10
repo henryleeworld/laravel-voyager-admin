@@ -1,4 +1,4 @@
-# Laravel 12 領航者管理
+# Laravel 13 領航者管理
 
 引入 ahmadsyamim 的 voyager 套件來擴增很輕易的為你的應用程式建構 CRUD （建立、讀取、更新、刪除）功能，建構不同的選單，以及管理多媒體檔案。在管理介面的資料庫裏面可以直接用來管理資料庫及資料表，BREAD （瀏覽、讀取、編輯、建立、刪除）功能則是可以很用非常便利的方式，直接設定資料表欄位可以出現在在瀏覽、編輯、添加、刪除或者全部都看到的，全部都可以設定，尤其他的功能屬性是什麼，可以是文字欄位、選單、圖片、檔案、等，除了這些，還有可選細項可以處理。
 
@@ -26,11 +26,11 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/itdfCJm.png)
+![](https://i.imgur.com/Qy16gIh.png)
 > 登入帳號後，你可以查看相關設定
 
-![](https://i.imgur.com/8ALLSna.png)
+![](https://i.imgur.com/VCKckk6.png)
 > 在先天設計上，就是用來專注於撰寫文章，建議安裝 Google Analytics 作分析
 
-![](https://i.imgur.com/O7LlgCQ.png)
+![](https://i.imgur.com/zR8Fnlc.png)
 > 一般來說，使用者會依據資訊的主要內容決定要點閱的搜尋結果，所以請盡量在網頁上提供高品質的標題
